@@ -1,0 +1,4 @@
+# Copiar como app-local.properties. El archivo real se excluye de Git.
+spring.datasource.password=CAMBIAR_PASSWORD_SQL_SERVER
+yapaa.jwt.secreto=CAMBIAR_POR_UN_SECRETO_DE_AL_MENOS_32_BYTES
+yapaa.ruc.token=CAMBIAR_POR_TOKEN_DEL_PROVEEDOR

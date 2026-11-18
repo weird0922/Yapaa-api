@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="04-sistema-afiliacion-comisiones" name="YAPAA · Sistema — afiliación y venta con comisión">
+    <mxGraphModel dx="1600" dy="1420" grid="1" gridSize="10" page="1" pageWidth="1600" pageHeight="1420">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lim" value="Sistema YAPAA" style="rounded=0;fillColor=none;strokeColor=#64748b;verticalAlign=top;align=left;spacingLeft=15;spacingTop=10;fontSize=21;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="90" width="1080" height="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="sol" value="Solicitante de&#10;cuenta negocio" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="neg" value="Negocio" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="40" y="720" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ruc" value="Servicio externo&#10;RUC · Decolecta" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="320" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="afi" value="CUS-04&#10;Solicitar afiliación" style="ellipse;whiteSpace=wrap;html=0;fillColor=#fff7ed;strokeColor=#a84720;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="360" y="180" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rucuc" value="CUS-05&#10;Consultar RUC" style="ellipse;whiteSpace=wrap;html=0;fillColor=#fff7ed;strokeColor=#a84720;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="340" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="venta" value="CUS-13&#10;Confirmar venta realizada" style="ellipse;whiteSpace=wrap;html=0;fillColor=#fff7ed;strokeColor=#a84720;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="360" y="700" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="com" value="CUS-14&#10;Generar comisión" style="ellipse;whiteSpace=wrap;html=0;fillColor=#fff7ed;strokeColor=#a84720;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="700" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="can" value="CUS-15&#10;Cancelar pedido" style="ellipse;whiteSpace=wrap;html=0;fillColor=#fff7ed;strokeColor=#a84720;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1060" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nota" value="Cuenta nueva NEGOCIO, distinta de CLIENTE.&#10;Razón social consultada; afiliación pendiente de aprobación.&#10;Plan Promocional asignado al registro." style="shape=note;whiteSpace=wrap;html=0;fillColor=#f1f5f9;strokeColor=#94a3b8;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="360" y="420" width="570" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="nota2" value="Comisión única por PedidoNegocio.&#10;Base = subtotal de productos.&#10;Tasa = plan vigente al confirmar.&#10;El delivery no integra la base.&#10;Confirmar dos veces no duplica." style="shape=note;whiteSpace=wrap;html=0;fillColor=#f1f5f9;strokeColor=#94a3b8;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="940" y="880" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nota3" value="Cancelar antes de concretar: devuelve stock una vez; sin comisión.&#10;Una venta COMPLETADA no se cancela mediante este flujo." style="shape=note;whiteSpace=wrap;html=0;fillColor=#f1f5f9;strokeColor=#94a3b8;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1200" width="890" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" value="" style="endArrow=none;html=0;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=16;strokeColor=#475569;" edge="1" parent="1" source="sol" target="afi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="«include»" style="endArrow=open;dashed=1;html=0;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=16;strokeColor=#475569;" edge="1" parent="1" source="afi" target="rucuc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="endArrow=none;html=0;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=16;strokeColor=#475569;" edge="1" parent="1" source="ruc" target="rucuc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="endArrow=none;html=0;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=16;strokeColor=#475569;" edge="1" parent="1" source="neg" target="venta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="«include»" style="endArrow=open;dashed=1;html=0;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=16;strokeColor=#475569;" edge="1" parent="1" source="venta" target="com">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" style="endArrow=none;html=0;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=16;strokeColor=#475569;" edge="1" parent="1" source="neg" target="can">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

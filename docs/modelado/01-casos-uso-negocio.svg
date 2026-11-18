@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220">
+<defs><marker id="flecha" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L10 6 L1 11" fill="none" stroke="#475569" stroke-width="1.4"/></marker></defs>
+<rect width="1600" height="1220" fill="white"/>
+<text x="50" y="48" font-family="Arial" font-size="28" font-weight="bold" fill="#172b3a">YAPAA · Casos de uso del negocio</text>
+<rect x="300" y="90" width="1000" height="1000" fill="none" stroke="#64748b" stroke-width="2"/>
+<text x="318" y="123" font-family="Arial" font-size="21" font-weight="bold">Negocio YAPAA: intermediación de excedentes alimentarios</text>
+<path d="M1370 525.0 L1260.0 525.0 L1260.0 220.0 L1150 220.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1370 525.0 L1260.0 525.0 L1260.0 390.0 L1150 390.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1370 525.0 L1055.0 525.0 L1055.0 530.0 L740 530.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1370 525.0 L1260.0 525.0 L1260.0 700.0 L1150 700.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1370 525.0 L1260.0 525.0 L1260.0 900.0 L1150 900.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M210 530.0 L310.0 530.0 L310.0 530.0 L410 530.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M210 530.0 L515.0 530.0 L515.0 700.0 L820 700.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="130.0" cy="466" r="14"/><path d="M130.0 480 V518 M106.0 495 H154.0 M130.0 518 L107.0 546 M130.0 518 L153.0 546"/></g>
+<text x="130.0" y="570" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Consumidor</text>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="1460.0" cy="456" r="14"/><path d="M1460.0 470 V508 M1436.0 485 H1484.0 M1460.0 508 L1437.0 536 M1460.0 508 L1483.0 536"/></g>
+<text x="1460.0" y="560" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Establecimiento</text>
+<text x="1460.0" y="582" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">gastronómico</text>
+<ellipse cx="985.0" cy="220.0" rx="165.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="985.0" y="215.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUN-01</text>
+<text x="985.0" y="237.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Afiliar establecimiento</text>
+<ellipse cx="985.0" cy="390.0" rx="165.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="985.0" y="385.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUN-02</text>
+<text x="985.0" y="407.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Ofrecer excedentes alimentarios</text>
+<ellipse cx="575.0" cy="530.0" rx="165.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="575.0" y="525.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUN-03</text>
+<text x="575.0" y="547.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Gestionar solicitud de compra</text>
+<ellipse cx="985.0" cy="700.0" rx="165.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="985.0" y="695.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUN-04</text>
+<text x="985.0" y="717.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Concretar venta y entrega</text>
+<ellipse cx="985.0" cy="900.0" rx="165.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="985.0" y="895.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUN-05</text>
+<text x="985.0" y="917.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Gestionar plan y comisión</text>
+<rect x="345" y="890" width="420" height="155" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="555.0" y="918.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Trabajador interno: administrador de</text>
+<text x="555.0" y="940.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">YAPAA.</text>
+<text x="555.0" y="962.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Revisa afiliaciones y verifica</text>
+<text x="555.0" y="984.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">liquidaciones.</text>
+<text x="555.0" y="1006.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">La venta y entrega se coordinan fuera de</text>
+<text x="555.0" y="1028.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">la web.</text>
+</svg>

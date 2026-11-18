@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1720" viewBox="0 0 1800 1720">
+<defs><marker id="flecha" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L10 6 L1 11" fill="none" stroke="#475569" stroke-width="1.4"/></marker></defs>
+<rect width="1800" height="1720" fill="white"/>
+<text x="50" y="48" font-family="Arial" font-size="28" font-weight="bold" fill="#172b3a">YAPAA · Casos de uso del sistema — vista general</text>
+<rect x="270" y="90" width="1260" height="1430" fill="none" stroke="#64748b" stroke-width="2"/>
+<text x="288" y="123" font-family="Arial" font-size="21" font-weight="bold">Sistema web YAPAA · Angular + Spring Boot</text>
+<path d="M190 230.0 L260.0 230.0 L260.0 205.0 L330 205.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M190 230.0 L260.0 230.0 L260.0 355.0 L330 355.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M190 230.0 L260.0 230.0 L260.0 505.0 L330 505.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M190 230.0 L260.0 230.0 L260.0 655.0 L330 655.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M190 780.0 L260.0 780.0 L260.0 505.0 L330 505.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M190 780.0 L260.0 780.0 L260.0 865.0 L330 865.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M190 780.0 L260.0 780.0 L260.0 1055.0 L330 1055.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 720.0 L1507.5 720.0 L1507.5 205.0 L1410 205.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 720.0 L1507.5 720.0 L1507.5 355.0 L1410 355.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 720.0 L1507.5 720.0 L1507.5 505.0 L1410 505.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 720.0 L1507.5 720.0 L1507.5 695.0 L1410 695.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 720.0 L1507.5 720.0 L1507.5 865.0 L1410 865.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 720.0 L1507.5 720.0 L1507.5 1055.0 L1410 1055.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 720.0 L1507.5 720.0 L1507.5 1225.0 L1410 1225.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 1330.0 L1122.5 1330.0 L1122.5 1275.0 L640 1275.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M1605 1330.0 L1312.5 1330.0 L1312.5 1415.0 L1020 1415.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="115.0" cy="176" r="14"/><path d="M115.0 190 V228 M91.0 205 H139.0 M115.0 228 L92.0 256 M115.0 228 L138.0 256"/></g>
+<text x="115.0" y="280" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Visitante</text>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="115.0" cy="726" r="14"/><path d="M115.0 740 V778 M91.0 755 H139.0 M115.0 778 L92.0 806 M115.0 778 L138.0 806"/></g>
+<text x="115.0" y="830" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Cliente</text>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="1680.0" cy="666" r="14"/><path d="M1680.0 680 V718 M1656.0 695 H1704.0 M1680.0 718 L1657.0 746 M1680.0 718 L1703.0 746"/></g>
+<text x="1680.0" y="770" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Negocio</text>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="1680.0" cy="1276" r="14"/><path d="M1680.0 1290 V1328 M1656.0 1305 H1704.0 M1680.0 1328 L1657.0 1356 M1680.0 1328 L1703.0 1356"/></g>
+<text x="1680.0" y="1380" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Administrador</text>
+<ellipse cx="485.0" cy="205.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="485.0" y="211.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-01 · Registrar cliente</text>
+<ellipse cx="485.0" cy="355.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="485.0" y="361.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-02 · Iniciar sesión</text>
+<ellipse cx="485.0" cy="505.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="485.0" y="511.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-03 · Consultar catálogo</text>
+<ellipse cx="485.0" cy="655.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="485.0" y="661.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-04 · Solicitar afiliación</text>
+<ellipse cx="485.0" cy="865.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="485.0" y="871.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-08 · Registrar pedido</text>
+<ellipse cx="485.0" cy="1055.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="485.0" y="1061.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-11 · Consultar mis pedidos</text>
+<ellipse cx="1255.0" cy="205.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1255.0" y="211.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-06 · Administrar cuenta</text>
+<ellipse cx="1255.0" cy="355.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1255.0" y="361.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-07 · Gestionar productos</text>
+<ellipse cx="1255.0" cy="505.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1255.0" y="500.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-12 · Consultar pedidos y</text>
+<text x="1255.0" y="522.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">comisiones</text>
+<ellipse cx="1255.0" cy="695.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1255.0" y="690.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-13 · Confirmar venta</text>
+<text x="1255.0" y="712.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">realizada</text>
+<ellipse cx="1255.0" cy="865.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1255.0" y="871.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-15 · Cancelar pedido</text>
+<ellipse cx="1255.0" cy="1055.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1255.0" y="1050.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-16/17 · Consultar y cambiar</text>
+<text x="1255.0" y="1072.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">plan</text>
+<ellipse cx="1255.0" cy="1225.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1255.0" y="1220.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-18 · Consultar indicadores</text>
+<text x="1255.0" y="1242.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">y CSV</text>
+<ellipse cx="485.0" cy="1275.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="485.0" y="1281.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-19 · Revisar afiliaciones</text>
+<ellipse cx="865.0" cy="1415.0" rx="155.0" ry="45.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="865.0" y="1421.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-20 · Liquidar comisiones</text>
+<rect x="350" y="1100" width="650" height="95" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="675.0" y="1131.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Precondición de CUS-18: Plan Pro vigente.</text>
+<text x="675.0" y="1153.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">El cliente necesita sesión para registrar pedidos.</text>
+<text x="675.0" y="1175.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">El negocio no compra ni consulta el catálogo público.</text>
+<rect x="330" y="1560" width="1140" height="95" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="900.0" y="1602.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Los casos incluidos y actores externos se detallan en las vistas de compra y afiliación/ventas.</text>
+<text x="900.0" y="1624.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Los permisos de administrador son excepciones de gestión, no una cuenta cliente o negocio.</text>
+</svg>

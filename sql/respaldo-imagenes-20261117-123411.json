@@ -1,0 +1,112 @@
+[
+  {
+    "idProducto": 1,
+    "nombre": "Hamburguesa Clasica",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Hamburguesa%20Clasica%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 2,
+    "nombre": "Cheeseburger",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Cheeseburger%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 3,
+    "nombre": "Hamburguesa Royal",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Hamburguesa%20Royal%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 4,
+    "nombre": "Hamburguesa Doble",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Hamburguesa%20Doble%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 5,
+    "nombre": "Hamburguesa BBQ",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Hamburguesa%20BBQ%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 6,
+    "nombre": "Salchipapa Clasica",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Salchipapa%20Clasica%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 7,
+    "nombre": "Salchipapa Especial",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Salchipapa%20Especial%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 8,
+    "nombre": "Alitas BBQ x 6",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Alitas%20BBQ%20x%206%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 9,
+    "nombre": "Alitas Crocantes x 6",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Alitas%20Crocantes%20x%206%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 10,
+    "nombre": "Sandwich de Pollo",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Sandwich%20de%20Pollo%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 11,
+    "nombre": "Sandwich Mixto",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Sandwich%20Mixto%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 12,
+    "nombre": "Empanada de Pollo",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Empanada%20de%20Pollo%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 13,
+    "nombre": "Empanada de Carne",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Empanada%20de%20Carne%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 14,
+    "nombre": "Croissant Clasico",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Croissant%20Clasico%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 15,
+    "nombre": "Croissant de Jamon y Queso",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Croissant%20de%20Jamon%20y%20Queso%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 16,
+    "nombre": "Brownie de Chocolate",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Brownie%20de%20Chocolate%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 17,
+    "nombre": "Alfajor Artesanal",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Alfajor%20Artesanal%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 18,
+    "nombre": "Pan con Pollo",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Pan%20con%20Pollo%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 19,
+    "nombre": "Club Sandwich",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Club%20Sandwich%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 20,
+    "nombre": "Sandwich de Pollo Crocante",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Sandwich%20de%20Pollo%20Crocante%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 21,
+    "nombre": "Torta de Chocolate",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Torta%20de%20Chocolate%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  },
+  {
+    "idProducto": 22,
+    "nombre": "Cheesecake Individual",
+    "imagenUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Cheesecake%20Individual%20fotografia%20gastronomica%20profesional%20sobre%20mesa%20de%20madera&image_size=landscape_4_3"
+  }
+]

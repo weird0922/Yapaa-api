@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+<defs><marker id="flecha" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L10 6 L1 11" fill="none" stroke="#475569" stroke-width="1.4"/></marker></defs>
+<rect width="1600" height="1420" fill="white"/>
+<text x="50" y="48" font-family="Arial" font-size="28" font-weight="bold" fill="#172b3a">YAPAA · Sistema — afiliación y venta con comisión</text>
+<rect x="290" y="90" width="1080" height="1260" fill="none" stroke="#64748b" stroke-width="2"/>
+<text x="308" y="123" font-family="Arial" font-size="21" font-weight="bold">Sistema YAPAA</text>
+<path d="M220 240.0 L290.0 240.0 L290.0 230.0 L360 230.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M650 230.0 L825.0 230.0 L825.0 390.0 L1000 390.0" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#flecha)"/>
+<text x="831.0" y="302.0" font-family="Arial" font-size="16" fill="#334155">«include»</text>
+<path d="M1400 400.0 L1345.0 400.0 L1345.0 390.0 L1290 390.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M220 800.0 L290.0 800.0 L290.0 750.0 L360 750.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M650 750.0 L825.0 750.0 L825.0 750.0 L1000 750.0" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#flecha)"/>
+<text x="831.0" y="742.0" font-family="Arial" font-size="16" fill="#334155">«include»</text>
+<path d="M220 800.0 L290.0 800.0 L290.0 1110.0 L360 1110.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="130.0" cy="176" r="14"/><path d="M130.0 190 V228 M106.0 205 H154.0 M130.0 228 L107.0 256 M130.0 228 L153.0 256"/></g>
+<text x="130.0" y="280" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Solicitante de</text>
+<text x="130.0" y="302" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">cuenta negocio</text>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="130.0" cy="736" r="14"/><path d="M130.0 750 V788 M106.0 765 H154.0 M130.0 788 L107.0 816 M130.0 788 L153.0 816"/></g>
+<text x="130.0" y="840" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Negocio</text>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="1490.0" cy="336" r="14"/><path d="M1490.0 350 V388 M1466.0 365 H1514.0 M1490.0 388 L1467.0 416 M1490.0 388 L1513.0 416"/></g>
+<text x="1490.0" y="440" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Servicio externo</text>
+<text x="1490.0" y="462" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">RUC · Decolecta</text>
+<ellipse cx="505.0" cy="230.0" rx="145.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="505.0" y="225.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-04</text>
+<text x="505.0" y="247.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Solicitar afiliación</text>
+<ellipse cx="1145.0" cy="390.0" rx="145.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1145.0" y="385.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-05</text>
+<text x="1145.0" y="407.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Consultar RUC</text>
+<ellipse cx="505.0" cy="750.0" rx="145.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="505.0" y="745.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-13</text>
+<text x="505.0" y="767.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Confirmar venta realizada</text>
+<ellipse cx="1145.0" cy="750.0" rx="145.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1145.0" y="745.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-14</text>
+<text x="1145.0" y="767.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Generar comisión</text>
+<ellipse cx="505.0" cy="1110.0" rx="145.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="505.0" y="1105.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-15</text>
+<text x="505.0" y="1127.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Cancelar pedido</text>
+<rect x="360" y="420" width="570" height="145" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="645.0" y="465.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Cuenta nueva NEGOCIO, distinta de CLIENTE.</text>
+<text x="645.0" y="487.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Razón social consultada; afiliación pendiente de</text>
+<text x="645.0" y="509.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">aprobación.</text>
+<text x="645.0" y="531.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Plan Promocional asignado al registro.</text>
+<rect x="940" y="880" width="370" height="170" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="1125.0" y="927.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Comisión única por PedidoNegocio.</text>
+<text x="1125.0" y="949.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Base = subtotal de productos.</text>
+<text x="1125.0" y="971.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Tasa = plan vigente al confirmar.</text>
+<text x="1125.0" y="993.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">El delivery no integra la base.</text>
+<text x="1125.0" y="1015.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Confirmar dos veces no duplica.</text>
+<rect x="360" y="1200" width="890" height="115" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="805.0" y="1252.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Cancelar antes de concretar: devuelve stock una vez; sin comisión.</text>
+<text x="805.0" y="1274.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Una venta COMPLETADA no se cancela mediante este flujo.</text>
+</svg>

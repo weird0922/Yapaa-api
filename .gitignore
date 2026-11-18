@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Credencial local del proveedor RUC
+/config/ruc-local.properties
+
+/config/*-local.properties
+.env
+.env.local
+*.log

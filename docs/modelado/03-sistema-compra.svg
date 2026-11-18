@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080">
+<defs><marker id="flecha" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L10 6 L1 11" fill="none" stroke="#475569" stroke-width="1.4"/></marker></defs>
+<rect width="1600" height="1080" fill="white"/>
+<text x="50" y="48" font-family="Arial" font-size="28" font-weight="bold" fill="#172b3a">YAPAA · Sistema — compra y continuación por WhatsApp</text>
+<rect x="300" y="100" width="1100" height="740" fill="none" stroke="#64748b" stroke-width="2"/>
+<text x="318" y="133" font-family="Arial" font-size="21" font-weight="bold">Sistema YAPAA</text>
+<path d="M210 415.0 L305.0 415.0 L305.0 380.0 L400 380.0" fill="none" stroke="#475569" stroke-width="1.5"/>
+<path d="M700 380.0 L840.0 380.0 L840.0 250.0 L980 250.0" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#flecha)"/>
+<text x="846.0" y="307.0" font-family="Arial" font-size="16" fill="#334155">«include»</text>
+<path d="M700 380.0 L840.0 380.0 L840.0 520.0 L980 520.0" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#flecha)"/>
+<text x="846.0" y="442.0" font-family="Arial" font-size="16" fill="#334155">«include»</text>
+<g fill="none" stroke="#172b3a" stroke-width="2.5"><circle cx="135.0" cy="356" r="14"/><path d="M135.0 370 V408 M111.0 385 H159.0 M135.0 408 L112.0 436 M135.0 408 L158.0 436"/></g>
+<text x="135.0" y="460" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Cliente</text>
+<ellipse cx="550.0" cy="380.0" rx="150.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="550.0" y="375.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-08</text>
+<text x="550.0" y="397.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Registrar pedido</text>
+<ellipse cx="1140.0" cy="250.0" rx="160.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1140.0" y="245.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-09</text>
+<text x="1140.0" y="267.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Validar disponibilidad</text>
+<ellipse cx="1140.0" cy="520.0" rx="160.0" ry="50.0" fill="#fff7ed" stroke="#a84720" stroke-width="1.8"/>
+<text x="1140.0" y="515.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-10</text>
+<text x="1140.0" y="537.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Generar enlace WhatsApp</text>
+<rect x="390" y="650" width="910" height="130" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="845.0" y="699.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-09 comprueba negocio aprobado, producto publicado, plazo y stock.</text>
+<text x="845.0" y="721.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">CUS-08 reserva stock y registra pedido PENDIENTE.</text>
+<text x="845.0" y="743.0" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">No crea Pago ni Comisión.</text>
+<rect x="320" y="890" width="1040" height="115" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="840.0" y="942.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">Fuera del sistema: el cliente decide abrir WhatsApp y enviar el mensaje.</text>
+<text x="840.0" y="964.5" text-anchor="middle" font-family="Arial" font-size="18" fill="#172b3a">YAPAA no verifica el envío, el pago ni la entrega mediante la API de WhatsApp.</text>
+</svg>

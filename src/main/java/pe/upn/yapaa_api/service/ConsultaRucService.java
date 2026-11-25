@@ -25,7 +25,6 @@ public class ConsultaRucService {
         if(ruc==null || !ruc.matches("(10|20)[0-9]{9}"))throw new ReglaNegocioException("Ingresa un RUC de 11 digitos que empiece por 10 o 20.");
         Cache anterior=cache.get(ruc);
         if(anterior!=null && anterior.vence()>System.currentTimeMillis())return anterior.datos();
-        // Fixtures explicitas: nunca se presentan como datos verificados de SUNAT.
         if(demo && java.util.Set.of("20000000001","20000000002").contains(ruc)){
             return new ConsultaRucResponse(ruc,"NEGOCIO DE DEMOSTRACION YAPAA S.A.C.","ACTIVO","HABIDO",false,true);
         }

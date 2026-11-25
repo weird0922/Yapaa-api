@@ -83,6 +83,11 @@ public class ProductoService {
     @Transactional
     public Result<ProductoResponse> crear(ProductoRequest request) {
         validarPrecios(request.getPrecioNormal(), request.getPrecioDescuento());
+        String imagen=request.getImagenUrl();
+        if(imagen!=null&&!imagen.isBlank()&&!imagen.matches("(?i)https://[^\\s]+")&&!imagen.matches("/imagenes/productos/[a-zA-Z0-9._-]+"))throw new ReglaNegocioException("La fotografia debe usar una URL HTTPS o una imagen local del catalogo.");
+        request.setNombre(request.getNombre().strip());
+        if(request.getNombre().length()<2||request.getNombre().chars().anyMatch(Character::isISOControl))throw new ReglaNegocioException("Ingresa un nombre de producto valido.");
+        if(request.getFechaLimiteVenta().isAfter(LocalDateTime.now().plusDays(30)))throw new ReglaNegocioException("El plazo de venta no puede superar los 30 dias.");
         if (request.getFechaLimiteVenta().isBefore(LocalDateTime.now())) {
             throw new ReglaNegocioException("La fecha limite de venta debe ser posterior al momento actual.");
         }
@@ -110,6 +115,11 @@ public class ProductoService {
     @Transactional
     public Result<ProductoResponse> actualizar(Integer id, ProductoRequest request) {
         validarPrecios(request.getPrecioNormal(), request.getPrecioDescuento());
+        String imagen=request.getImagenUrl();
+        if(imagen!=null&&!imagen.isBlank()&&!imagen.matches("(?i)https://[^\\s]+")&&!imagen.matches("/imagenes/productos/[a-zA-Z0-9._-]+"))throw new ReglaNegocioException("La fotografia debe usar una URL HTTPS o una imagen local del catalogo.");
+        request.setNombre(request.getNombre().strip());
+        if(request.getNombre().length()<2||request.getNombre().chars().anyMatch(Character::isISOControl))throw new ReglaNegocioException("Ingresa un nombre de producto valido.");
+        if(request.getFechaLimiteVenta().isAfter(LocalDateTime.now().plusDays(30)))throw new ReglaNegocioException("El plazo de venta no puede superar los 30 dias.");
         if (request.getFechaLimiteVenta().isBefore(LocalDateTime.now())) {
             throw new ReglaNegocioException("La fecha limite de venta debe ser posterior al momento actual.");
         }
@@ -157,7 +167,7 @@ public class ProductoService {
         producto.setPrecioNormal(request.getPrecioNormal());
         producto.setPrecioDescuento(request.getPrecioDescuento());
         producto.setStock(request.getStock());
-        producto.setFechaPublicacion(request.getFechaPublicacion());
+        producto.setFechaPublicacion(LocalDateTime.now());
         producto.setFechaLimiteVenta(request.getFechaLimiteVenta());
         producto.setEstadoPublicacion(
                 request.getEstadoPublicacion() == null ? "BORRADOR" : request.getEstadoPublicacion());

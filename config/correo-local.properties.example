@@ -1,0 +1,5 @@
+# Copiar como correo-local.properties, excluido de Git.
+# Activar verificacion en dos pasos y generar contraseña de aplicacion de Gmail.
+yapaa.correo.modo=smtp
+spring.mail.username=yapaaservice@gmail.com
+spring.mail.password=CONTRASENA_DE_APLICACION_DE_GOOGLE

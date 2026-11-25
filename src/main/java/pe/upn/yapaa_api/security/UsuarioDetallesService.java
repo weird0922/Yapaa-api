@@ -19,6 +19,7 @@ public class UsuarioDetallesService implements UserDetailsService {
     private final CuentaRepository cuentaRepository;
     @org.springframework.beans.factory.annotation.Value("${yapaa.demo.habilitado:false}")
     private boolean demoHabilitado;
+    @org.springframework.beans.factory.annotation.Value("${yapaa.admin.correo:admin@admin.com}") private String administrador;
 
     public UsuarioDetallesService(CuentaRepository cuentaRepository) {
         this.cuentaRepository = cuentaRepository;
@@ -33,6 +34,7 @@ public class UsuarioDetallesService implements UserDetailsService {
                 .contains(cuenta.getCorreo().toLowerCase(java.util.Locale.ROOT));
         List<SimpleGrantedAuthority> autoridades = cuenta.getRoles().stream()
                 .map(Rol::getNombre)
+                .filter(nombre -> !nombre.equals("ADMIN") || cuenta.getCorreo().equalsIgnoreCase(administrador))
                 .map(nombre -> new SimpleGrantedAuthority("ROLE_" + nombre))
                 .collect(Collectors.toList());
 
@@ -40,7 +42,7 @@ public class UsuarioDetallesService implements UserDetailsService {
                 .username(cuenta.getCorreo())
                 .password(cuenta.getContrasenaHash())
                 .authorities(autoridades)
-                .disabled(!"ACTIVO".equals(cuenta.getEstado()) || (esDemostracion && !demoHabilitado))
+                .disabled(!"ACTIVO".equals(cuenta.getEstado()) || (esDemostracion && !demoHabilitado) || (cuenta.getRoles().stream().anyMatch(r->r.getNombre().equals("ADMIN"))&&!cuenta.getCorreo().equalsIgnoreCase(administrador)))
                 .build();
     }
 }

@@ -7,9 +7,11 @@ public class LoginRequest {
 
     @NotBlank(message = "El correo o usuario es obligatorio.")
     @Pattern(regexp = "(?i)(cliente|negocio|admin|[^\\s@]+@[^\\s@]+\\.[^\\s@]+)", message = "Ingresa un correo valido o un usuario de demostracion.")
+    @jakarta.validation.constraints.Size(max=254)
     private String correo;
 
     @NotBlank(message = "La contrasena es obligatoria.")
+    @jakarta.validation.constraints.Size(max=64)
     private String contrasena;
 
     public String getCorreo() {

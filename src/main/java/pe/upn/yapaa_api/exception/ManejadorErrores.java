@@ -51,7 +51,7 @@ public class ManejadorErrores {
 
     @ExceptionHandler(org.springframework.security.authentication.DisabledException.class)
     public ResponseEntity<Result<String>> manejarCuentaDeshabilitada() {
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Result.error("La cuenta no esta habilitada."));
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Result.error("Credenciales invalidas."));
     }
 
     @ExceptionHandler(BadCredentialsException.class)

@@ -9,6 +9,7 @@ public class PedidoRequest {
 
     @NotEmpty(message = "El pedido debe tener al menos un grupo.")
     @Valid
+    @jakarta.validation.constraints.Size(max=10)
     private List<GrupoPedidoRequest> grupos;
 
     public List<GrupoPedidoRequest> getGrupos() {

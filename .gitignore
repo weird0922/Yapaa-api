@@ -39,3 +39,6 @@ build/
 .env
 .env.local
 *.log
+
+/config/buzon-local/
+/config/correo-local.properties

@@ -57,6 +57,7 @@ public class PedidoService {
     private final NegocioRepository negocioRepository;
     private final UsuarioActual usuarioActual;
 
+    @org.springframework.beans.factory.annotation.Autowired private DeliveryService deliveryService;
     private final Random azar = new Random();
 
     public PedidoService(PedidoRepository pedidoRepository,
@@ -78,12 +79,15 @@ public class PedidoService {
 
         Pedido pedido = new Pedido();
         pedido.setCuenta(cuenta);
+        pedido.setStockDescontado(false);
         pedido.setCodigoPedido(generarCodigoUnico());
 
         BigDecimal subtotalPedido = BigDecimal.ZERO;
         BigDecimal deliveryPedido = BigDecimal.ZERO;
 
+        Set<Integer> negociosIncluidos=new HashSet<>();
         for (GrupoPedidoRequest grupo : request.getGrupos()) {
+            if(!negociosIncluidos.add(grupo.getIdNegocio()))throw new ReglaNegocioException("Agrupa los productos de cada negocio una sola vez.");
             PedidoNegocio subpedido = construirSubpedido(pedido, grupo);
             subtotalPedido = subtotalPedido.add(subpedido.getSubtotalProductos());
             deliveryPedido = deliveryPedido.add(subpedido.getCostoDelivery());
@@ -92,6 +96,7 @@ public class PedidoService {
 
         pedido.setSubtotalProductos(subtotalPedido);
         pedido.setCostoDeliveryTotal(deliveryPedido);
+        if(subtotalPedido.add(deliveryPedido).compareTo(new BigDecimal("9999999999.99"))>0)throw new ReglaNegocioException("El importe del pedido supera el limite permitido. Reduce las cantidades.");
         pedido.setTotal(subtotalPedido.add(deliveryPedido));
 
         Pedido guardado = pedidoRepository.save(pedido);
@@ -159,24 +164,21 @@ public class PedidoService {
         }
 
         boolean delivery = "DELIVERY".equals(grupo.getModalidadEntrega());
-        if (delivery && (grupo.getDireccionEntrega() == null || grupo.getDireccionEntrega().isBlank())) {
-            throw new ReglaNegocioException("La direccion de entrega es obligatoria para la modalidad DELIVERY.");
-        }
+        var cotizacion=delivery?deliveryService.consumir(grupo.getIdNegocio(),grupo.getCotizacionDelivery()):null;
 
         PedidoNegocio subpedido = new PedidoNegocio();
         subpedido.setPedido(pedido);
         subpedido.setNegocio(negocio);
         subpedido.setModalidadEntrega(grupo.getModalidadEntrega());
-        subpedido.setDireccionEntrega(delivery ? grupo.getDireccionEntrega() : null);
-        subpedido.setCostoDelivery(delivery && grupo.getCostoDelivery() != null
-                ? grupo.getCostoDelivery() : BigDecimal.ZERO);
+        subpedido.setDireccionEntrega(delivery ? cotizacion.direccion() : null);
+        subpedido.setCostoDelivery(delivery ? cotizacion.importe() : BigDecimal.ZERO);
         subpedido.setEstado("PENDIENTE");
 
         BigDecimal subtotal = BigDecimal.ZERO;
         LocalDateTime limite = LocalDateTime.now().plusMinutes(1);
 
         for (ItemProductoRequest item : grupo.getItems().stream().sorted(java.util.Comparator.comparing(ItemProductoRequest::getIdProducto)).toList()) {
-            Producto producto = productoRepository.buscarParaActualizar(item.getIdProducto())
+            Producto producto = productoRepository.findById(item.getIdProducto())
                     .orElseThrow(() -> new RecursoNoEncontradoException(
                             "Producto no encontrado: " + item.getIdProducto()));
 
@@ -185,9 +187,6 @@ public class PedidoService {
                         + " no pertenece al negocio indicado.");
             }
             validarDisponible(producto, item.getCantidad(), limite);
-            if (productoRepository.descontarStock(producto.getIdProducto(), item.getCantidad()) != 1) {
-                throw new ReglaNegocioException("Stock insuficiente para el producto: " + producto.getNombre());
-            }
 
             DetallePedido detalle = new DetallePedido();
             detalle.setPedidoNegocio(subpedido);
@@ -208,15 +207,19 @@ public class PedidoService {
         return subpedido;
     }
 
-    private void validarDisponible(Producto producto, Integer cantidad, LocalDateTime limite) {
+    static void validarDisponible(Producto producto, Integer cantidad, LocalDateTime limite) {
+        validarVigencia(producto, limite);
+        if (producto.getStock() < cantidad) {
+            throw new ReglaNegocioException("Stock insuficiente para el producto: " + producto.getNombre());
+        }
+    }
+
+    static void validarVigencia(Producto producto, LocalDateTime limite) {
         if (!"PUBLICADO".equals(producto.getEstadoPublicacion()) || !Boolean.TRUE.equals(producto.getActivo())) {
             throw new ReglaNegocioException("El producto no esta publicado: " + producto.getNombre());
         }
         if (producto.getFechaLimiteVenta().isBefore(limite)) {
             throw new ReglaNegocioException("El plazo de venta del producto ha finalizado: " + producto.getNombre());
-        }
-        if (producto.getStock() < cantidad) {
-            throw new ReglaNegocioException("Stock insuficiente para el producto: " + producto.getNombre());
         }
         Negocio negocio = producto.getNegocio();
         if (!"APROBADO".equals(negocio.getEstadoAprobacion()) || !Boolean.TRUE.equals(negocio.getActivo())) {

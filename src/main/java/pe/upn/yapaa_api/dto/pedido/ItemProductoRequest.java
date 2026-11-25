@@ -10,6 +10,7 @@ public class ItemProductoRequest {
 
     @NotNull(message = "La cantidad es obligatoria.")
     @Min(value = 1, message = "La cantidad debe ser al menos 1.")
+    @jakarta.validation.constraints.Max(value=999,message="La cantidad maxima por producto es 999.")
     private Integer cantidad;
 
     public Integer getIdProducto() {

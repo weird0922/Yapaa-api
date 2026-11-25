@@ -41,6 +41,9 @@ public class SimulacionDemoService {
             }else if(!fechaDeHoy){p.setFechaRegistro(ahora);p.setFechaPublicacion(ahora);}
             if(renovar || !fechaDeHoy)cambios.add(p);
         }
+        for(Producto p:productos.buscarEscenarioDemo()){
+            if(p.getFechaLimiteVenta()==null||!p.getFechaLimiteVenta().isAfter(ahora)){p.setFechaLimiteVenta(ahora.plusHours(4+p.getIdProducto()%36));p.setFechaRegistro(ahora);p.setFechaPublicacion(ahora);if(p.getStock()<=0)p.setStock(8);cambios.add(p);}
+        }
         if(!cambios.isEmpty())productos.saveAll(cambios);
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import pe.upn.yapaa_api.model.Pago;
 
 public interface PagoRepository extends JpaRepository<Pago, Integer> {
+    long countByPedidoIdPedido(Integer idPedido);
 
     Page<Pago> findByPedidoIdPedido(Integer idPedido, Pageable pageable);
 

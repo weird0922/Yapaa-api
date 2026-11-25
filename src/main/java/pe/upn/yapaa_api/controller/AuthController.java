@@ -19,9 +19,10 @@ import pe.upn.yapaa_api.service.AuthService;
 public class AuthController {
 
     private final AuthService authService;
+    private final pe.upn.yapaa_api.security.LimiteIntentos limites;
 
-    public AuthController(AuthService authService) {
-        this.authService = authService;
+    public AuthController(AuthService authService, pe.upn.yapaa_api.security.LimiteIntentos limites) {
+        this.authService = authService;this.limites=limites;
     }
 
     @org.springframework.beans.factory.annotation.Value("${yapaa.demo.habilitado:false}")
@@ -36,7 +37,8 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Result<LoginResponse>> login(@Valid @RequestBody LoginRequest request) {
+    public ResponseEntity<Result<LoginResponse>> login(@Valid @RequestBody LoginRequest request, jakarta.servlet.http.HttpServletRequest peticion) {
+        limites.comprobar("login:"+peticion.getRemoteAddr(),30);
         return ResponseEntity.ok(authService.login(request));
     }
 

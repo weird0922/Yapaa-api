@@ -19,14 +19,23 @@ public class GrupoPedidoRequest {
     @Pattern(regexp = "RECOJO|DELIVERY", message = "La modalidad debe ser RECOJO o DELIVERY.")
     private String modalidadEntrega;
 
+    @jakarta.validation.constraints.Size(max=250)
     private String direccionEntrega;
 
     @DecimalMin(value = "0.00", message = "El costo de delivery no puede ser negativo.")
+    @jakarta.validation.constraints.Digits(integer=4,fraction=2)
+    @jakarta.validation.constraints.DecimalMax("999.99")
     private BigDecimal costoDelivery;
 
     @NotEmpty(message = "El grupo debe tener al menos un producto.")
     @Valid
+    @jakarta.validation.constraints.Size(max=50)
     private List<ItemProductoRequest> items;
+
+    @jakarta.validation.constraints.Size(max=36)
+    private String cotizacionDelivery;
+    public String getCotizacionDelivery(){return cotizacionDelivery;}
+    public void setCotizacionDelivery(String v){cotizacionDelivery=v;}
 
     public Integer getIdNegocio() {
         return idNegocio;

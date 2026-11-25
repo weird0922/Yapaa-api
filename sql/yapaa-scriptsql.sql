@@ -245,6 +245,7 @@ CREATE TABLE dbo.pedido (
     total DECIMAL(12,2) NOT NULL,
     estado_pedido VARCHAR(15) NOT NULL DEFAULT ('PENDIENTE'),
     estado_pago VARCHAR(12) NOT NULL DEFAULT ('PENDIENTE'),
+    stock_descontado BIT NULL,
     CONSTRAINT PK_pedido PRIMARY KEY (id_pedido),
     CONSTRAINT UQ_pedido_codigo UNIQUE (codigo_pedido),
     CONSTRAINT FK_pedido_cuenta FOREIGN KEY (id_cuenta)

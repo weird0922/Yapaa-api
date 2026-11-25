@@ -46,6 +46,9 @@ public interface ProductoRepository extends JpaRepository<Producto, Integer> {
     @Query("SELECT p FROM Producto p JOIN FETCH p.negocio n WHERE p.idProducto IN :ids AND n.nombreComercial IN :nombres")
     java.util.List<Producto> buscarSimulados(@Param("ids") java.util.List<Integer> ids, @Param("nombres") java.util.List<String> nombres);
 
+    @Query("SELECT p FROM Producto p JOIN FETCH p.negocio n WHERE n.ruc LIKE '20999%'")
+    java.util.List<Producto> buscarEscenarioDemo();
+
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query("SELECT p FROM Producto p WHERE p.idProducto = :idProducto")
     Optional<Producto> buscarParaActualizar(@Param("idProducto") Integer idProducto);

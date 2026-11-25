@@ -35,14 +35,16 @@ public class AuthService {
     private final UsuarioActual usuarioActual;
     private final NegocioService negocioService;
     private final ConsultaRucService consultaRuc;
+    private final VerificacionCorreoService verificacion;
     @Value("${yapaa.demo.habilitado:false}")
     private boolean demoHabilitado;
+    @Value("${yapaa.admin.correo:admin@admin.com}") private String administrador;
 
     public AuthService(AuthenticationManager authenticationManager,
                        CuentaRepository cuentaRepository,
                        RolRepository rolRepository,
                        PasswordEncoder passwordEncoder,
-                       JwtService jwtService, UsuarioActual usuarioActual, NegocioService negocioService, ConsultaRucService consultaRuc) {
+                       JwtService jwtService, UsuarioActual usuarioActual, NegocioService negocioService, ConsultaRucService consultaRuc, VerificacionCorreoService verificacion) {
         this.authenticationManager = authenticationManager;
         this.cuentaRepository = cuentaRepository;
         this.rolRepository = rolRepository;
@@ -51,6 +53,7 @@ public class AuthService {
         this.usuarioActual = usuarioActual;
         this.negocioService = negocioService;
         this.consultaRuc = consultaRuc;
+        this.verificacion=verificacion;
     }
 
     public Result<LoginResponse> login(LoginRequest request) {
@@ -65,6 +68,11 @@ public class AuthService {
 
     @Transactional
     public Result<LoginResponse> registrar(RegistroRequest request) {
+        request.setCorreo(VerificacionCorreoService.normalizar(request.getCorreo()));
+        if(request.getCorreo().strip().equalsIgnoreCase(administrador))throw new ReglaNegocioException("Este correo no esta disponible para registro.");
+        ValidacionRegistro.clave(request.getContrasena(),request.getConfirmarContrasena());
+        request.setNombres(ValidacionRegistro.nombre(request.getNombres()));request.setApellidos(ValidacionRegistro.nombre(request.getApellidos()));
+        request.setTelefono(ValidacionRegistro.telefono(request.getTelefono()));
         if (cuentaRepository.existsByCorreo(request.getCorreo())) {
             throw new ReglaNegocioException("El correo ya se encuentra registrado.");
         }
@@ -98,13 +106,17 @@ public class AuthService {
         }
 
         Cuenta guardada = cuentaRepository.save(cuenta);
+        verificacion.consumir(request.getCorreo(),request.getTokenVerificacion());
 
         return Result.exitoso("Registro exitoso.", construirRespuesta(guardada));
     }
 
     @Transactional
     public Result<LoginResponse> registrarNegocio(pe.upn.yapaa_api.dto.auth.RegistroNegocioRequest request) {
-        String correo = request.getCorreo().trim().toLowerCase(java.util.Locale.ROOT);
+        String correo = VerificacionCorreoService.normalizar(request.getCorreo());
+        if(request.getCorreo().strip().equalsIgnoreCase(administrador))throw new ReglaNegocioException("Este correo no esta disponible para registro.");
+        ValidacionRegistro.clave(request.getContrasena(),request.getConfirmarContrasena());
+        ValidacionRegistro.telefono(request.getTelefonoContacto());
         if (cuentaRepository.existsByCorreo(correo)) {
             throw new ReglaNegocioException("Usa un correo distinto al de tu cuenta de cliente. Las cuentas de cliente y negocio son independientes.");
         }
@@ -119,6 +131,7 @@ public class AuthService {
                 .orElseThrow(() -> new RecursoNoEncontradoException("Rol NEGOCIO no encontrado.")));
         Cuenta guardada = cuentaRepository.save(cuenta);
         negocioService.registrarNuevaCuenta(guardada, request, datos.razonSocial());
+        verificacion.consumir(correo,request.getTokenVerificacion());
         return Result.exitoso("Cuenta de negocio creada. La solicitud queda pendiente de aprobacion.", construirRespuesta(guardada));
     }
 
@@ -138,6 +151,7 @@ public class AuthService {
     private LoginResponse construirRespuesta(Cuenta cuenta) {
         List<String> roles = cuenta.getRoles().stream()
                 .map(Rol::getNombre)
+                .filter(rol->!rol.equals("ADMIN")||cuenta.getCorreo().equalsIgnoreCase(administrador))
                 .collect(Collectors.toList());
         String token = jwtService.generarToken(cuenta.getCorreo(), roles);
 

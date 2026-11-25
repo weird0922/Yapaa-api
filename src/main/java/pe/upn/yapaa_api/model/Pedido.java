@@ -52,6 +52,18 @@ public class Pedido {
     @Column(name = "estado_pago", nullable = false, length = 12)
     private String estadoPago;
 
+    @Column(name = "stock_descontado")
+    private Boolean stockDescontado;
+
+    public boolean tieneStockDescontado() {
+        // Los pedidos históricos ya descontaban al crearse.
+        return !Boolean.FALSE.equals(stockDescontado);
+    }
+
+    public void setStockDescontado(boolean stockDescontado) {
+        this.stockDescontado = stockDescontado;
+    }
+
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<PedidoNegocio> pedidosNegocio = new ArrayList<>();
 

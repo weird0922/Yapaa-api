@@ -2,6 +2,19 @@
 
 API de YAPAA desarrollada con Java 21, Spring Boot, Spring Security/JWT, JPA y SQL Server. La interfaz Angular se mantiene en [Yapaa-web](https://github.com/weird0922/Yapaa-web).
 
+### Arranque de demostración en Windows, sin Docker
+
+Con Java 21, SQL Server en localhost:1433 y sqlcmd instalados, ejecutar
+**Iniciar-API.cmd** desde esta carpeta. El asistente usa la contraseña del
+usuario sa del SQL Server local y crea o actualiza únicamente la base
+**YAPAA_DEMO_GIT**. Para el OTP usa el remitente ya configurado o solicita su
+contraseña de aplicación de Gmail la primera vez. El correo remitente
+sugerido es **yapaaservice@gmail.com**.
+
+Cuenta administrativa de esta base: **admin@admin.com / YapaaDemo2026!**.
+Después, iniciar Yapaa-web y entrar por **http://localhost:4200/login**.
+
+
 ## Ejecución local
 
 1. Instalar JDK 21 y disponer de SQL Server con la base `YAPAA_BD` y su esquema existente.
@@ -17,7 +30,7 @@ Los scripts SQL históricos de creación pueden eliminar y recrear la base de de
 
 - Cuentas CLIENTE, NEGOCIO y ADMIN separadas. Un cliente registra una cuenta negocio con otro correo.
 - Afiliación con consulta de RUC y aprobación administrativa.
-- Productos con precio reducido, existencias y vigencia; reserva transaccional al registrar pedido.
+- Productos con precio reducido, existencias y vigencia; descuento transaccional al aprobar el pago simulado.
 - Pedido pendiente y enlace WhatsApp por negocio, sin crear un pago.
 - El pago aprobado confirma el pedido y aplica automáticamente una comisión única por subpedido. El negocio marca después la entrega; esta acción no vuelve a cobrar comisión.
 - Comisión sobre subtotal de productos, excluyendo delivery. Tasa vigente al aprobar el pago, redondeada a dos decimales.
